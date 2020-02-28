@@ -20,6 +20,7 @@ btn.addEventListener("click", function(){
 	grid = document.querySelector("#grid-ihoover");
 	instructions = document.getElementById('instructions').value;
 
+	document.querySelector(".position-initiale").innerText = `Position initiale: x=${posX} y=${posY} orientation=${posN}`
 	// afficher la grille correspondante aux dimensions fournies
 	displayGridY();
 	gridStyle.style = `grid-template-columns: ${amount}`;
@@ -43,12 +44,17 @@ btn.addEventListener("click", function(){
 	} else {
 		finish.classList.add("red");
 		finish.innerText = posN ;
+		document.querySelector(".final-answer").innerText = `Position finale: x=${posX} y=${posY} orientation=${posN}`
 	}
 });
 
 const gridStyle = document.querySelector('#grid-ihoover');
 
 let amount = "";
+
+function disableButton(btn){
+	document.getElementById('submit-btn').disabled = true;
+}
 
 function startingPoint() {
 	let posXToS = posX.toString();

@@ -50,7 +50,11 @@ p {
 
 .btn-grid{
 	display: flex;
-	justify-content: center
+	justify-content: center;
+}
+
+button {
+	margin: 1rem;
 }
 
 .all-grid{
@@ -62,4 +66,11 @@ p {
 .final-answer {
 	text-align: center;
     color: red;
+    margin: 1rem
+}
+
+.position-initiale {
+	text-align: center;
+    color: blue;
+    margin: 1rem
 }
