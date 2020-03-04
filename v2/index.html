@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>IHoover</title>
+    <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1 class="text-center"><strong> Mouvement du IHoover</strong></h1>
+    
+    <div class="inputs">
+      <div class="inputs-block">
+        <p> Choisir la longueur de la grille (x)</p>
+        <input type="text" id="x-height" value="10">
+        <p>Choisir la position de départ (x-y-(N/S/W/S))</p>
+        <input type="text" id="starting-position-x" value="5">
+        <input type="text" id="starting-position-y" value="5">
+        <input type="text" id="starting-position-n" value="N">
+      </div>
+
+      <di class="inputs-block">
+        <p> Choisir la hauteur de la grille (y)</p>
+        <input type="text" id="y-length" value="10">
+        <p>Instructions (D/A/G)</p>
+        <input type="text" id="instructions" value='DADADADAA'>
+      </div>
+    </div>
+    <div class='btn-grid'>
+        <button class='btn btn-light' type="button" id='submit-btn' onclick="disableButton(this)">Soumettre !</button>
+        <button class='btn btn-light' type="button" id='submit-btn' onclick="window.location.reload();">Rafraichir la page</button>
+    </div>
+    <div class="position-initiale"></div>
+    <div class='all-grid'>
+      <div id="grid-ihoover">
+      </div>
+    </div>
+
+    <div class="final-answer"></div>
+
+    <script src="iHoover.js"></script>
+
+  </body>
+</html>
